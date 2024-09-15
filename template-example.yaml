@@ -1,4 +1,4 @@
-AWSTemplateFormatVersion: "2010-09-09"
+AWSTemplateFormatVersion: '2010-09-09'
 Transform: AWS::Serverless-2016-10-31
 Resources:
   MyHonoFunction:
@@ -13,3 +13,10 @@ Resources:
           Properties:
             Path: /{proxy+}
             Method: ANY
+      Environment:
+        Variables:
+          PORT: '****'
+          MONGODB_USER: '****'
+          MONGODB_PASSWORD: '****'
+          MONGODB_URL: 'clustername.****.mongodb.net'
+          MONGODB_DB: '****'
